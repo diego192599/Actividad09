@@ -15,3 +15,26 @@ def registrarClientes():
             destino=input(f" Destino {i+1}")
             destinos.append(destino)
 
+        clientes[codigo]={
+            "nombre": nombre,
+            "destinos": destinos
+        }
+
+ def Contar_viajes(lista,i=0,j=0):
+     if i>=len(lista):
+         return 0
+     elif j>=len(lista[i]):
+         return Contar_viajes(lista,i+1,0)
+     else:
+         return 1+Contar_viajes(lista,i,j+1)
+
+def clientes_Destinos(clientes):
+    max_destinos=-1
+    clientes_mayor=""
+    for codigo, datos in clientes.items():
+        contador=0
+        for _ in datos["destinos"]:
+            contador=+1
+        if contador>max_destinos:
+            max_destinos=contador
+            clientes_mayor=print(f"Codigo: {codigo}, Nombre: {datos['nombre']} Cantidad de destinos: {_[datos]['destinos']}")
