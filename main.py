@@ -37,4 +37,12 @@ def clientes_Destinos(clientes):
             contador=+1
         if contador>max_destinos:
             max_destinos=contador
-            clientes_mayor=print(f"Codigo: {codigo}, Nombre: {datos['nombre']} Cantidad de destinos: {_[datos]['destinos']}")
+            clientes_mayor=print(f"Codigo: {codigo}, Nombre: {datos['nombre']} Cantidad de destinos: {contador}")
+
+def Mostrar(clientes):
+    print("\n ===Lista de clientes registrados===")
+    for codigo, datos in clientes.items():
+        print(f"Codigo : {codigo}")
+        print(f"Nombre: {datos['nombre']}")
+
+
