@@ -54,8 +54,15 @@ def Mostrar(clientes):
     for codigo, datos in clientes.items():
         print(f"Código : {codigo}")
         print(f"Nombre: {datos['nombre']}")
-        print(f"Destinos: {', '.join(datos['destinos'])}")
-
+        print("Destinos: ", end="")
+        contados=0
+        total=len(datos['destinos'])
+        for destinos in datos['destinos']:
+            print(destinos,end="")
+            contados+=1
+            if contados< total:
+                print("", end="")
+        print()
 
 def total_destinos(clientes):
     lisa_datos=[]
@@ -63,7 +70,8 @@ def total_destinos(clientes):
         lisa_datos.append(datos['destinos'])
     total=Contar_viajes(lisa_datos)
     print(f"\n Total de viajes realizados entre todo los clientes es {total}")
-#Menu
+
+
 while True:
     print("\n== Menú ==")
     print("1. Registrar clientes")
