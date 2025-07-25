@@ -69,8 +69,7 @@ def total_destinos(clientes):
     for datos in clientes.values():
         lisa_datos.append(datos['destinos'])
     total=Contar_viajes(lisa_datos)
-    print(f"\n Total de viajes realizados entre todo los clientes es {total}")
-
+    print(f"\n Total de viajes realizados entre todo los clientes es : {total}")
 
 while True:
     print("\n== Menú ==")
@@ -94,4 +93,4 @@ while True:
         print("Saliendo del programa.")
         break
     else:
-        print("Debe seleccionar una opción válida. Intente nuevamente.")
+        print("Debe seleccionar una opción válida. Intente nuevamente. ")
